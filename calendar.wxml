@@ -1,0 +1,30 @@
+<wxs src="./calendar.wxs" module="fun" />
+<view class="box">
+  <view class="header">
+    <picker mode="date" start="2023-01-01" end="2040-01-01" bindchange="bindDateChange">
+      <view class="day">{{fun.setHeader(header)}}</view>
+    </picker>
+    <van-icon name="arrow-down" color="#FF8615" />
+  </view>
+</view>
+<view class="calendar_box">
+  <view class="clendar_week">
+    <view class="date weekColor">日</view>
+    <view class="date weekColor">一</view>
+    <view class="date weekColor">二</view>
+    <view class="date weekColor">三</view>
+    <view class="date weekColor">四</view>
+    <view class="date weekColor">五</view>
+    <view class="date weekColor">六</view>
+  </view>
+  <view class="clendar_week">
+    <view class="date week_day" wx:for="{{claenderDay}}" wx:key="this">
+      <view style="color:{{fun.setColor(item.active,item.isCurrentMonth)}}">{{item.day}}</view>
+      <view wx:if="{{item.active}}" class="content">内容</view>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+  <view>点击收起</view>
+  <van-icon name="arrow-up" color="#FF8615" />
+</view>

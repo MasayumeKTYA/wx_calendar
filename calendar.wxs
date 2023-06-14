@@ -1,0 +1,20 @@
+ function setHeader(Timestamp) {
+   var date = getDate(Timestamp);
+   var res = date.getFullYear() + '.' + (date.getMonth() + 1)
+   return res
+ }
+
+ function setColor(isActive, isCurrentMonth) {
+   if (!isActive && isCurrentMonth) {
+     return '#000'
+   } else if (isActive && isCurrentMonth) {
+     return '#FF8615'
+   } else if (!isActive && !isCurrentMonth) {
+     return '#c8c9cc'
+   }
+
+ }
+ module.exports = {
+   setHeader: setHeader,
+   setColor: setColor,
+ }

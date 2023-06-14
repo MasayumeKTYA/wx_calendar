@@ -1,0 +1,48 @@
+.box {
+  background: #fff;
+}
+.box .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF8615;
+  height: 106rpx;
+}
+.box .header .day {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+.calendar_box {
+  background: #fff;
+}
+.calendar_box .clendar_week {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar_box .clendar_week .date {
+  text-align: center;
+  width: 106rpx;
+  font-size: 26rpx;
+  position: relative;
+}
+.calendar_box .clendar_week .weekColor {
+  color: #868B9F;
+}
+.calendar_box .clendar_week .week_day {
+  margin-top: 52rpx;
+}
+.calendar_box .clendar_week .content {
+  bottom: -20rpx;
+  left: 38rpx;
+  position: absolute;
+  font-size: 18rpx;
+  color: #FF8615;
+}
+.bottom {
+  color: #FF8615;
+  padding: 52rpx 0 31rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
